@@ -1,0 +1,7 @@
+{
+  "name": "trulycake",
+  "private": true,
+  "devDependencies": {
+    "sass": "^1.32.13"
+  }
+}

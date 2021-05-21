@@ -73,6 +73,8 @@ gem 'autoprefixer-rails', '~> 10.2', '>= 10.2.5.0'
 
 gem 'coffee-script-source', '1.8.0'
 
+gem 'sassc', '~> 2.3'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end

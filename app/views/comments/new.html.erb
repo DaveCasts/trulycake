@@ -1,0 +1,23 @@
+
+
+
+<% @comments.each do |comment| %>
+  <div>
+    <h1><%= comment.name %></h1><br />
+    <i><%= comment.productname %></i><br />
+    <p><%= comment.description %></p><br />
+  </div>
+
+  <hr />
+<% end %>
+
+<div class="booyah-box col-10 offset-1">
+  <h1>Enter Your Comment Details</h1>
+  <%= simple_form_for @comment do |f| %>
+    <%= f.input :name %>
+    <%= f.input :productname %>
+    <%= f.input :description %>
+    <br />
+    <%= f.submit 'Create', class: 'btn btn-primary' %>
+  <% end %>
+</div>

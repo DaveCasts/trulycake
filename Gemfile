@@ -14,7 +14,7 @@ gem 'puma', '~> 3.11'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'mini_racer', platforms: :ruby
+#gem 'mini_racer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -62,9 +62,16 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap', '~> 5.0.1'
-gem 'jquery-rails'
+
+gem 'jquery-rails', '~> 4.4'
 
 gem 'popper_js', '~> 2.9.2'
+
+gem 'simple_form'
+
+gem 'autoprefixer-rails', '~> 10.2', '>= 10.2.5.0'
+
+gem 'coffee-script-source', '1.8.0'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'

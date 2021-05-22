@@ -1,10 +1,186 @@
-<% @comments.each do |comment| %>
-  <div>
-    <h1><%= comment.name %></h1><br />
-    <i><%= comment.productname %></i><br />
-    <p><%= comment.description %></p><br />
-  </div>
 
-  <hr />
-<% end %>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  
+  <div class="about-container">
+
+    <div style="text-align:center" class="about booyah-box">
+
+      <h1>Truly Cheesecake</h1>
+      <h2>By Kimberly Johnson</h2>
+      <hr class="gray"/> 
+      <p class="bio">
+        I make exquisite cheesecakes.
+      <br />
+        Want one? <a href="#hire-me" class="con-link">Contact me.</a>
+      </p>
+    </div>
+    </div>
+
+    <h3 class="about" id="bout" style="text-align:center">About</h3>
+    <hr class="blue">
+
+    <div class="text-center">
+      <p align="center">
+        I have been making cheesecakes for 5+ years.
+      <br />
+        My cheesecakes are unique, you can tell by the taste.
+      <br />
+        Please contact me by phone or email.
+      <br />
+        Now serving single slices at <a href="https://losamigoskitchen.com/">Los Amigos Kitchen!</a>
+      </p>
+    </div>
+
+    <br class="clear" />
+    <div class="booyah-box" style="text-align:center">
+      <h3 id="cheese-cakes">My Creations</h3>
+
+      <hr class="blue" />
+
+    <div class="container">  
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+          <li data-target="#myCarousel" data-slide-to="5"></li>
+          <li data-target="#myCarousel" data-slide-to="6"></li>
+          <li data-target="#myCarousel" data-slide-to="7"></li>
+          <li data-target="#myCarousel" data-slide-to="8"></li>
+          <li data-target="#myCarousel" data-slide-to="9"></li>
+          <li data-target="#myCarousel" data-slide-to="10"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <%= image_tag '1.jpg', class: 'd-block w-100 img-fluid', style: 'width: 80%, height: 80%', alt: 'Mexican Chocolate' %>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="com">Mexican Chocolate Cheesecake</h5>
+            </div>
+          </div>
+
+          <div class="item">
+            <%= image_tag '2.jpg', class: 'd-block w-100 img-fluid', style: 'width: 80%, height: 80%', alt: 'Peacan Pie' %>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="com">Peacan Pie Cheesecake</h5>
+            </div>
+          </div>
+        
+          <div class="item">
+            <%= image_tag '3.jpg', class: 'd-block w-100 img-fluid', style: 'width: 80%, height: 80%', alt: 'Vanilla Bean & Caramel Swirl' %>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="com">Vanilla Bean & Caramel Swirl Cheesecake</h5>
+            </div>
+          </div>
+
+          <div class="item">
+            <%= image_tag '4.jpg', class: 'd-block w-100 img-fluid', style: 'width: 80%, height: 80%', alt: 'Lemon Meringue' %>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="com">Lemon Meringue Cheesecake</h5>
+            </div>
+          </div>
+
+          <div class="item">
+            <%= image_tag '5.jpg', class: 'd-block w-100 img-fluid', style: 'width: 80%, height: 80%', alt: 'Lemon & Cherry Swirl' %>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="com">Lemon & Cherry Swirl Cheesecake</h5>
+            </div>
+          </div>
+
+          <div class="item">
+            <%= image_tag '6.jpg', class: 'd-block w-100 img-fluid', style: 'width: 80%, height: 80%', alt: 'Cherry & Vanilla' %>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="com">Cherry & Vanilla Cheesecake</h5>
+            </div>
+          </div>
+
+          <div class="item">
+            <%= image_tag '7.jpg', class: 'd-block w-100 img-fluid', style: 'width: 80%, height: 80%', alt: 'Boston Cream' %>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="com">Boston Cream Cheesecake</h5>
+            </div>
+          </div>
+
+          <div class="item">
+            <%= image_tag '8.jpg', class: 'd-block w-100 img-fluid', style: 'width: 80%, height: 80%', alt: 'Peeps' %>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="com">Peeps Cheesecake</h5>
+            </div>
+          </div>
+
+          <div class="item">
+            <%= image_tag '9.jpg', class: 'd-block w-100 img-fluid', style: 'width: 80%, height: 80%', alt: 'Traditional' %>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="com">Traditional Cheesecake</h5>
+            </div>
+          </div>
+
+          <div class="item">
+            <%= image_tag '10.jpg', class: 'd-block w-100 img-fluid', style: 'width: 80%, height: 80%', alt: 'Christmas Cherry & Vanilla Swirl' %>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="com">Christmas Cherry & Vanilla Swirl Cheesecake</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <br class="clear" />
+
+      <% @comments.each do |comment| %>
+        <div class="booyah-box col-10 offset-1" style="text-align:center">
+          <h1><%= comment.name %></h1><br />
+          <i><%= comment.productname %></i><br />
+          <p><%= comment.description %></p><br />
+        </div>
+
+        <hr />
+      <% end %>
+
+    <br class="clear" />
+
+    <div class="contact-me booyah-box" id="hire-me" style="text-align:center" />
+
+      <h3 class="contact-headline">Contact</h3>
+      <hr class="blue" />
+      <p class="contact-info">
+          Please allow up to 3 days for cheesecakes.
+          Please get in touch via email or phone:
+          </p>
+
+          <p>
+          <a href="mailto:my@email.com" class="contact-link">
+            ki.johnson711.0@gmail.com
+          </a>
+          <br />
+          <p class="contact-link">Telephone: 720-629-6711</p>
+      </p>
+ <!--      <br class ="clear"/> -->
+
+    </div>
+
+</body>
 

@@ -8,10 +8,18 @@ class CommentsController < ApplicationController
 		@comment = Comment.new
 	end
 
+	# def show
+	#   @comment = Comment.find(params[:id])
+	# end
+
 	def create
-    	Comment.create(comment_params)
-    	redirect_to root_path
-	  end
+    	@comment = comments.create(comment_params)
+		if @comment.valid?
+		    redirect_to root_path
+		else
+		    render :new, status: :unprocessable_entity
+		end
+	end
 
 	  private
 

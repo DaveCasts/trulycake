@@ -17,4 +17,3 @@
 //= require bootstrap-sprockets
 //= require bootstrap
 //= require_tree .
-//= require pictureslider.js

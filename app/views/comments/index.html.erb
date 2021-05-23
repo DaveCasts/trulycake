@@ -10,19 +10,18 @@
 
 <body>
   
-  <div class="about-container">
-
-    <div style="text-align:center" class="about booyah-box">
-
-      <h1>Truly Cheesecake</h1>
-      <h2>By Kimberly Johnson</h2>
-      <hr class="gray"/> 
-      <p class="bio">
-        I make exquisite cheesecakes.
-      <br />
-        Want one? <a href="#hire-me" class="con-link">Contact me.</a>
-      </p>
-    </div>
+    <div class="hero" style="background: url(<%= asset_path 'bg4.jpg' %>) no-repeat center center fixed;">
+        <br />
+        <div class="frosty col-10 offset-1 text-center">
+          <h1>Truly Cheesecake</h1>
+          <h2>By Kimberly Johnson</h2>
+          <hr class="gray"/> 
+          <h2 class="bio">
+            I make exquisite cheesecakes.
+          <br />
+            Want one? <a href="#hire-me" class="con-link">Contact me.</a>
+          </h2>
+        </div>
     </div>
 
     <h3 class="about" id="bout" style="text-align:center">About</h3>
@@ -150,15 +149,40 @@
 
     <br class="clear" />
 
-      <% @comments.each do |comment| %>
-        <div class="booyah-box col-10 offset-1" style="text-align:center">
-          <h1><%= comment.name %></h1><br />
-          <i><%= comment.productname %></i><br />
-          <p><%= comment.description %></p><br />
+      <div>
+        <h1 style="text-align: center">Reviews</h1>
+        <% @comments.each do |comment| %>
+          <div class="booyah-box col-10 offset-1" style="text-align:center">
+            <h1><%= comment.name %></h1><br />
+            <i><%= comment.productname %></i><br />
+            <p><%= comment.description %></p><br />
+          </div>
+        <hr />
+        <% end %>
+      </div>
+
+      <!-- Trigger/Open The Modal -->
+      <button id="myBtn" class="btn btn-primary">Leave a Review</button>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="booyah-box col-10 offset-1">
+            <h1>Enter Your Review Details</h1>
+            <%= simple_form_for @comment do |f| %>
+              <%= f.input :name %>
+              <%= f.input :productname %>
+              <%= f.input :description %>
+              <br />
+              <%= f.submit 'Create', class: 'btn btn-primary' %>
+            <% end %>
+          </div>
         </div>
 
-        <hr />
-      <% end %>
+      </div>
 
     <br class="clear" />
 
@@ -184,3 +208,30 @@
 
 </body>
 
+   <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
